@@ -1,8 +1,6 @@
-package com.cg.rest.Employee.resource;R
+package com.cg.rest.Employee.resource;
 
 import java.util.List;
-
-import javax.xml.ws.RespectBinding;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cg.rest.employeeEntity.Employee;
+import com.cg.rest.Employee.Entity.Employee;
+import com.cg.rest.Employee.service.EmployeeService;
 
 @RestController
 @RequestMapping("/employees") // Addressable Resource
@@ -25,8 +24,9 @@ public class EmployeeResource {
 		service.addNewEmployee(employee);
 	}
 
-	@GetMapping// Uniform Contraint
+	@GetMapping// Uniform Constraint
 	public List<Employee> getAllEmployees() {
 		return service.getAllEmployees();
 	}
+
 }

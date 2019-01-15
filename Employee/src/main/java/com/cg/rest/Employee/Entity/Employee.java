@@ -1,13 +1,18 @@
 package com.cg.rest.Employee.Entity;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Employee {
 	
+	@Id
 	private int empId;
 	private String employeeName;
 	private double salary;
+	
+	@Embedded
 	private Address address;
 	public int getEmpId() {
 		return empId;

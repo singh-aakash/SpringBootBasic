@@ -1,4 +1,4 @@
-package com.cg.rest.Employee.Entity;
+package com.cg.employee.rest.student.entity;
 
 import javax.persistence.Embeddable;
 
@@ -8,6 +8,18 @@ public class Address {
 	private String city;
 	private int pincode;
 	private String state;
+	
+
+	
+	public Address() {
+	
+	}
+	public Address(String city, int pincode, String state) {
+		super();
+		this.city = city;
+		this.pincode = pincode;
+		this.state = state;
+	}
 	public String getCity() {
 		return city;
 	}
@@ -26,8 +38,5 @@ public class Address {
 	public void setState(String state) {
 		this.state = state;
 	}
-	
-	public Address() {
-		
-	}
+
 }
